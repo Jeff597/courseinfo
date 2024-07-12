@@ -10,8 +10,13 @@ const App = () => {
   const Header = (props) => {
     return <h1>{props.course}</h1>
   }
-  const Content = (props) => {
+
+  const Part = (props) => {
     return <p>{props.part} {props.exercise}</p>
+  }
+  
+  const Content = (props) => {
+    return <Part part={props.part} exercise={props.exercise}/>
   }
 
   const Total = (props) => {
